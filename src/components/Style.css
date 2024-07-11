@@ -1,0 +1,70 @@
+/* Style.css */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url('./image/image6.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+}
+
+.form {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+}
+
+.form div {
+    margin-bottom: 15px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form input,
+.form select,
+.form button {
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+
+.form .error {
+    color: red;
+    font-size: 12px;
+}
+
+.form .btn {
+    background-color:#2596be;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form .btn:hover {
+    background-color: green;
+}
+
+.form label {
+    font-weight: normal;
+}
