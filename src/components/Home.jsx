@@ -14,6 +14,7 @@ const Home = () => {
       try {
         const response = await axios.get('/api/user/submit-form');
         setUsers(response.data); // Assuming API returns an array of user objects
+        console.log(response);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -57,7 +58,7 @@ const Home = () => {
     },
     {
       name: 'interests',
-      selector: row => row.interests,
+      selector: row => row.interests.join(","),
       sortable: true,
     },
     {
