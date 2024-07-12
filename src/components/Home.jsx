@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import DataTable from 'react-data-table-component';
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import "./Home.css"
 
@@ -8,7 +7,7 @@ const Home = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const navigate = useNavigate();
+  
 
   useEffect(() => {
     const fetchUsers = async () => {

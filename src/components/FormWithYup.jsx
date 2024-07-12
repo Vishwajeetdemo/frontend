@@ -4,6 +4,8 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import './Style.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 
 const FormWithYup = () => {
     const [formData, setFormData] = useState({
@@ -18,7 +20,7 @@ const FormWithYup = () => {
         interests: [],
         birthDate: "",
     });
-
+    const navigate = useNavigate();
     const [errors, setErrors] = useState({});
 
     const validationSchema = Yup.object().shape({
@@ -55,6 +57,7 @@ const FormWithYup = () => {
             // If validation succeeds, send data to backend
             const response = await axios.post('/api/user/submit-form', formData); 
             console.log('Form Submitted successfully:', response.data);
+            navigate("/");
 
         }
 
@@ -227,7 +230,7 @@ const FormWithYup = () => {
                     />
                     {errors.birthDate && <div className="error">{errors.birthDate}</div>}
                 </div>
-                <button className="btn" type="submit">Submit</button>
+                <button className="btn"  type="submit">Submit</button>
             </form>
         </div>
     );
